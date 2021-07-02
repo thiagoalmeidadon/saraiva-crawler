@@ -1,10 +1,7 @@
 Raspagem de dados do site Saraiva 
 
+# pip install -r requirements.txt
+
+# python run.py
 
 
-'''
-pip install -r requirements.txt
-
-python run.py
-
-'''
