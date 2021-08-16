@@ -1,5 +1,5 @@
-# Raspagem de dados do site Saraiva - Titulo | Descrição | preço
-
+# Raspagem de dados do site Saraiva 
+- Titulo | Descrição | preço | ano publicação
 ## Instalação 
 ```
 # install requirements  
