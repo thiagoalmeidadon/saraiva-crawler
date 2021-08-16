@@ -1,7 +1,14 @@
-Raspagem de dados do site Saraiva 
+# Raspagem de dados do site Saraiva - Titulo | Descrição | preço
 
-# pip install -r requirements.txt
+## Instalação 
+```
+# install requirements  
+pip install -r requirements.txt
+```
 
-# python run.py
-
+## Execução
+```
+# run
+python run.py
+```
 
