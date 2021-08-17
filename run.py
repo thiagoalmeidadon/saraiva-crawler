@@ -16,8 +16,6 @@ def get_http(url, nome_livro):
     print(nome_livro)
     url = "{0}{1}".format(url, nome_livro)
     print(url)
-    e = input("teste")
-
     try :
         return requests.get(url)
     except (requests.exceptions.HTTPError, requests.exceptions.RequestException,
@@ -31,13 +29,15 @@ def get_detalhes(produto_url):
     try :     
         browser = webdriver.Chrome('./chromedriver')
         browser.get(produto_url)
-        time.sleep(25)
-        #request = requests.get(produto_url)
-        #soup = BeautifulSoup(request.text, 'lxml')
-        #detalhes = soup.find_all('div', {'id':'descricao'})
-        #for detalhe in detalhes:
-        #    print(detalhe)
-        #return requests.get(produto_url)
+        time.sleep(10)
+        browser.refresh()
+        time.sleep(10)
+        soup = BeautifulSoup(browser.page_source, 'lxml')
+        browser.quit()
+        detalhes = soup.find_all('div', {'id':'descricao'})
+        for detalhe in detalhes:
+            print(detalhe)
+        return requests.get(produto_url)
     except Exception as e :
         print(f"erro aqui {e}")
 
